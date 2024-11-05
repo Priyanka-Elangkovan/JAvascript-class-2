@@ -70,7 +70,7 @@ console.log(F1(1994, "Priyanka"));
 */
 //==============================================================================================
 //Array
-
+/*
 const a1 = ["line", "curve", "triangle", "slanted"];
 console.log(a1);
 console.log(a1[0], a1[a1.length-1], a1.lastIndexOf("curve"));
@@ -89,9 +89,52 @@ const dim = {
 
 console.log(dim.Date[0]);
 
-const dim = {
+const dim1 = {
     firstName: "Priyanka",
     lastName: "High",
     Date: [29,"Jan", 1990],
     Place: "London"
+
+    var calcag = function(){
+        var result = 2024-this.Date[2];
+        console.log(result);
+
+    }
+
 }
+
+dim.calcag();
+*/
+
+
+//Calculate the temperature amplitude using the temperatures array which has the day's value on temperature and also along with few error
+
+
+const temperature =[3,-2,-6,-1,'error',9 ,3,17,15,14,9,5];
+
+console.log(temperature);
+
+var mini;
+var maxi;
+
+mini=maxi=temperature[0];
+console.log(mini);
+
+for (let index = 1; index < temperature.length; index++) {
+    if (Number(temperature[index])){
+        if(mini>temperature[index]){
+            mini=temperature[index];
+        }
+        if(maxi<temperature[index]){
+            maxi=temperature[index];
+        }
+    }
+    
+}
+
+console.log(`the minimum and maximum value found out to be ${mini} and ${maxi}`)
+
+const CalcAmp = function(mi,ma){
+    return ma - mi;
+}
+console.log(CalcAmp(mini,maxi));
